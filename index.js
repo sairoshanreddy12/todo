@@ -181,11 +181,7 @@ app.post('/update/:id', async(req, res) => {
     try {
 
         const task = await todo.findOne({ _id: taskId, email : req.session.user.email });
-<<<<<<< HEAD
-        console.log(task, " got it")
-=======
         console.log(task, " dorikindi")
->>>>>>> f8f838d967d4b9ff27edd68f5957c4f2d0c649f8
         task.title = updatedText;
         task.completed = complete
         await task.save();
